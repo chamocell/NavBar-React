@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    height: 100px;
+    background: #03178c;
+    padding: 0 20px;
+    color: aliceblue;
+}
+
+.inner-header {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    line-height: 100px;
+    float: left;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    float: right;
+}
+
+.nav-links ul {
+    display: flex;
+    line-height: 100px;
+}
+
+.nav-links ul li {
+    list-style: none;
+}
+
+.nav-links ul li a {
+    margin: 0 15px;
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 0 15px;
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.nav-links ul li a:hover {
+    background-color: #3dadf2;
+}
+
+.mostrar-menu, .ocultar-menu {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.mostrar-menu:hover, .ocultar-menu:hover {
+    font-size: 2.8rem;
+    transition: all 0.2s;
+}
+
+.mostrar-menu {
+    float: right;
+    line-height: 100px;
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+}
+
+main {
+   max-width: 1200px;
+   margin: 0 auto; 
+}
+
+main p {
+    margin-top: 15px; 
+ }
+
+ @media screen and (max-width:800px){
+     .mostrar-menu, .ocultar-menu {
+         display: block;
+     }
+     .nav-links ul {
+         position: fixed;
+         width: 100%;
+         height: 100vh;
+         background-color: #020f59;
+         top: 0;
+         right: -100%;
+         line-height: normal;
+         padding-top: 80px;
+         flex-direction: column;
+         align-items: center;
+         transition: all .2s;
+     }
+     .nav-links ul li {
+         padding: 25px 0;
+     }
+     .ocultar-menu {
+         position: absolute;
+         top: 20px;
+         right: 30px;
+     }
+     #chk:checked ~ .nav-links ul {
+       right: 0;
+     }
+ }
